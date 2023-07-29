@@ -1,9 +1,9 @@
 import { createContext, useEffect, useReducer } from 'react'
 
 const initial_state = {
-   // user: localStorage.getItem("user") !== undefined ? JSON.stringify(localStorage.getItem("user")) : null,
-   // user: localStorage.getItem("user") !== undefined ? localStorage.getItem("user") : null,
-   user: localStorage.getItem("user") !== undefined ? JSON.parse(localStorage.getItem("user")) : null,
+   // user: localStorage.getItem("user_travel") !== undefined ? JSON.stringify(localStorage.getItem("user_travel")) : null,
+   // user: localStorage.getItem("user_travel") !== undefined ? localStorage.getItem("user_travel") : null,
+   user: localStorage.getItem("user_travel") !== undefined ? JSON.parse(localStorage.getItem("user_travel")) : null,
    loading: false,
    error: null
 }
@@ -54,7 +54,7 @@ export const AuthContextProvider = ({ children }) => {
    const [state, dispatch] = useReducer(AuthReducer, initial_state)
 
    useEffect(() => {
-      localStorage.setItem("user", JSON.stringify(state.user))
+      localStorage.setItem("user_travel", JSON.stringify(state.user))
    }, [state.user])
 
    return <AuthContext.Provider value={{

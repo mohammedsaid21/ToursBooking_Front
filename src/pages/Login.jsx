@@ -38,14 +38,17 @@ const Login = () => {
          })
 
          const result = await res.json()
-         
-         if (!res.ok) notify({info: "Check You Info", status: "failed"});
-         // alert(result.message)
-         console.log(result.data)
+         // if (result.success) {
+            console.log(result.data)
 
-         dispatch({ type: "LOGIN_SUCCESS", payload: result.data })
-         navigate('/')
-         notify({info: "User successfully Login", status: "success"});
+            dispatch({ type: "LOGIN_SUCCESS", payload: result.data })
+            navigate('/')
+            notify({ info: "User successfully Login", status: "success" });
+         // } else {
+         //    console.log(result)
+
+         //    notify({ info: result.message, status: "failed" });
+         // }
       } catch (err) {
          dispatch({ type: "LOGIN_FAILURE", payload: err.message })
       }
@@ -53,8 +56,8 @@ const Login = () => {
 
    return (
       <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+         initial={{ opacity: 0 }}
+         animate={{ opacity: 1 }}
       // exit={{ opacity: 1, transition: { duration: 0.1 } }}
       >
          <Container>

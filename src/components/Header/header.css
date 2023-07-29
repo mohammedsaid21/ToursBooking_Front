@@ -103,3 +103,27 @@
       width: calc(100% - 50%);
    }
 }
+@media only screen and (max-width: 460px) {
+   .logo img {
+      width: 100%;
+   }
+   .h5-small {
+      font-size: 14px;
+   }
+   
+   .h5-small + button {
+      font-size: 8px;
+      padding: 4px 8px !important;
+   }
+
+   .menu {
+      width: calc(100% - 20%);
+   }
+}
+
+.menu a {
+   cursor: pointer;
+}
+.mobile__menu {
+   cursor: pointer;
+}
