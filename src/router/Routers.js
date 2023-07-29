@@ -10,6 +10,7 @@ import Tours from './../pages/Tours'
 import AboutUs from '../pages/AboutUs'
 import Gallery from '../pages/Gallery'
 import { AnimatePresence } from 'framer-motion'
+import NotFound from '../pages/NotFound'
 
 
 const AuthWrapper = ({ element }) => {
@@ -48,6 +49,8 @@ const Routers = () => {
             <Route path='/thank-you' element={<ThankYou />} />
             <Route path='/tours/search' element={<SearchResultList />} />
             <Route path="/about" element={<AboutUs />} />
+
+            <Route path='*' element={<NotFound />} />
          </Routes>
       </AnimatePresence>
    )

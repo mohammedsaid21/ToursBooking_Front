@@ -1,9 +1,46 @@
 .thank__you span i {
    font-size: 4rem;
-   color    : green;
+   color: green;
 }
 
 .thank__you h1 {
    font-size: 2.5rem;
    font-family: var(--subtitle-font-name);
+}
+
+
+
+/* NotFound.css */
+.not-found-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+.not-found-content {
+   text-align: center;
+}
+
+.not-found-heading {
+   font-size: 6rem;
+   font-weight: bold;
+   margin-bottom: 20px;
+   color: #e74c3c;
+}
+
+.not-found-message {
+   font-size: 2rem;
+   color: #333;
+}
+
+.not-found-description {
+   font-size: 1.2rem;
+   color: #666;
+   margin-top: 20px;
+}
+
+.not-found-image {
+   max-width: 100%;
+   margin-top: 30px;
 }
